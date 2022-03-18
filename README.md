@@ -15,4 +15,6 @@ Once you are dealing with Global State, you're welcome to use MobX, Redux, Overm
 ## External Data
 
 React Query, SWR, Apollo Client, urql
+
+## Video
 https://www.youtube.com/watch?v=FzlurzsCW4M
