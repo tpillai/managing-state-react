@@ -31,7 +31,7 @@ function CountryProvider({ children }) {
   );
 }
 
-async function fetchCountry(country) {
+async function fetchCountry1(country) {
   const response = await fetch(
     `https://restcountries.eu/rest/v2/alpha/${country}`
   );
@@ -39,6 +39,13 @@ async function fetchCountry(country) {
   return data;
 }
 
+async function fetchCountry(country) {
+  const response = await fetch(
+    `https://restcountries.com/v3.1/alpha/${country}`
+  );
+  const data = await response.json();
+  return data;
+}
 function CountryDetails() {
   const { country } = useContext(CountryContext);
   const { data, isLoading, error } = useQuery([country], fetchCountry);
