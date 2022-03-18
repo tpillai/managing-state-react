@@ -31,14 +31,6 @@ function CountryProvider({ children }) {
   );
 }
 
-async function fetchCountry1(country) {
-  const response = await fetch(
-    `https://restcountries.eu/rest/v2/alpha/${country}`
-  );
-  const data = await response.json();
-  return data;
-}
-
 async function fetchCountry(country) {
   const response = await fetch(
     `https://restcountries.com/v3.1/alpha/${country}`
